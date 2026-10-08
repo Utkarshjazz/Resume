@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Utkarsh Jaiswal S | Resume</title>
+
+
+    <style>
+
+        /* ================================
+           BASIC RESET
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* ================================
+           PAGE
+        ================================= */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #eaf2f8;
+
+            color: #1e293b;
+
+            line-height: 1.5;
+        }
+
+
+        /* ================================
+           RESUME
+        ================================= */
+
+        .resume {
+            width: 210mm;
+
+            min-height: 297mm;
+
+            margin: 20px auto;
+
+            background: white;
+
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        .header {
+            display: flex;
+
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #0f4c81,
+                #1687c9
+            );
+
+            color: white;
+
+            padding: 28px 35px;
+        }
+
+
+        .profile-img {
+            width: 110px;
+
+            height: 110px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid white;
+
+            margin-right: 25px;
+        }
+
+
+        .header-info h1 {
+            font-size: 36px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .header-info h2 {
+            font-size: 16px;
+
+            font-weight: normal;
+
+            color: #dff3ff;
+
+            margin-bottom: 8px;
+        }
+
+
+        .header-info p {
+            font-size: 12px;
+
+            color: #eaf7ff;
+        }
+
+
+        /* ================================
+           TWO COLUMN LAYOUT
+        ================================= */
+
+        .content {
+            display: grid;
+
+            grid-template-columns: 32% 68%;
+        }
+
+
+        /* ================================
+           LEFT SIDEBAR
+        ================================= */
+
+        .sidebar {
+            background: #f3f8fc;
+
+            padding: 25px 22px;
+        }
+
+
+        /* ================================
+           RIGHT CONTENT
+        ================================= */
+
+        .main-content {
+            padding: 25px 30px;
+        }
+
+
+        /* ================================
+           SECTIONS
+        ================================= */
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+
+        .section h3 {
+            color: #0f4c81;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            border-bottom: 2px solid #1687c9;
+
+            padding-bottom: 5px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section p {
+            font-size: 11px;
+
+            line-height: 1.55;
+
+            color: #475569;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* ================================
+           SKILLS
+        ================================= */
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 5px;
+        }
+
+
+        .skills span {
+            background: white;
+
+            color: #0f4c81;
+
+            border: 1px solid #cbddec;
+
+            padding: 4px 7px;
+
+            border-radius: 4px;
+
+            font-size: 9px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           LISTS
+        ================================= */
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+
+        .sidebar li {
+            font-size: 11px;
+
+            color: #475569;
+
+            margin-bottom: 5px;
+
+            padding-left: 10px;
+        }
+
+
+        .sidebar li::before {
+            content: "•";
+
+            color: #1687c9;
+
+            font-weight: bold;
+
+            margin-right: 7px;
+        }
+
+
+        /* ================================
+           EDUCATION
+        ================================= */
+
+        .education h4 {
+            font-size: 13px;
+
+            color: #172033;
+
+            margin-bottom: 4px;
+        }
+
+
+        .education strong {
+            color: #0f4c81;
+        }
+
+
+        /* ================================
+           PROJECTS
+        ================================= */
+
+        .project {
+            margin-bottom: 13px;
+
+            padding-left: 12px;
+
+            border-left: 3px solid #1687c9;
+        }
+
+
+        .project h4 {
+            font-size: 13px;
+
+            color: #172033;
+
+            margin-bottom: 3px;
+        }
+
+
+        .project p {
+            margin-bottom: 3px;
+        }
+
+
+        .tech {
+            font-size: 9px;
+
+            color: #1687c9;
+
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           STRONG TEXT
+        ================================= */
+
+        strong {
+            color: #0f4c81;
+        }
+
+
+        /* ================================
+           PRINT / PDF
+        ================================= */
+
+        @page {
+            size: A4;
+
+            margin: 0;
+        }
+
+
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 210mm;
+
+                min-height: 297mm;
+
+                margin: 0;
+
+                box-shadow: none;
+            }
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media screen and (max-width: 800px) {
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 100%;
+
+                min-height: auto;
+
+                margin: 0;
+
+                box-shadow: none;
+            }
+
+            .header {
+                padding: 25px 20px;
+            }
+
+            .profile-img {
+                width: 85px;
+
+                height: 85px;
+
+                margin-right: 15px;
+            }
+
+            .header-info h1 {
+                font-size: 28px;
+            }
+
+            .header-info h2 {
+                font-size: 13px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar,
+            .main-content {
+                padding: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="resume">
+
+
+        <!-- ================================
+             HEADER
+        ================================= -->
+
+        <header class="header">
+
+            <img
+                src="/Image/IMG_20260501_210408.jpg"
+                alt="Utkarsh Jaiswal S"
+                class="profile-img"
+            >
+
+
+            <div class="header-info">
+
+                <h1>Utkarsh Jaiswal S</h1>
+
+                <h2>
+                    Computer Science Student | Developer | CSE Enthusiast
+                </h2>
+
+                <p>
+                    Tamil Nadu, India |
+                    B.E. Computer Science Engineering |
+                    Rathinam Technical Campus
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================
+             CONTENT
+        ================================= -->
+
+        <div class="content">
+
+
+            <!-- ================================
+                 LEFT COLUMN
+            ================================= -->
+
+            <aside class="sidebar">
+
+
+                <!-- CONTACT -->
+
+                <section class="section">
+
+                    <h3>CONTACT</h3>
+
+                    <p>📍 Tamil Nadu, India</p>
+
+                    <p>🎓 B.E. Computer Science Engineeringp>
+
+                    <p>🏫 Rathinam Technical Campus</p>
+
+                </section>
+
+
+                <!-- TECHNICAL SKILLS -->
+
+                <section class="section">
+
+                    <h3>TECHNICAL SKILLS</h3>
+
+
+                    <div class="skills">
+
+                        <span>C</span>
+
+                        <span>Java</span>
+
+                        <span>Python</span>
+
+                        <span>JavaScript</span>
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>React</span>
+
+                        <span>Tailwind CSS</span>
+
+                        <span>FastAPI</span>
+
+                        <span>PostgreSQL</span>
+
+                        <span>Supabase</span>
+
+                        <span>OpenCV</span>
+
+                        <span>Tesseract</span>
+
+                        <span>Git & GitHub</span>
+
+                        <span>Raspberry Pi</span>
+
+                        <span>ESP32</span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- AREAS OF INTEREST -->
+
+                <section class="section">
+
+                    <h3>AREAS OF INTEREST</h3>
+
+                    <ul>
+
+                        <li>Cyber Security</li>
+
+                        <li>Ethical Hacking</li>
+
+                        <li>Network Security</li>
+
+                        <li>Artificial Intelligence</li>
+
+                        <li>Machine Learning</li>
+
+                        <li>Computer Vision</li>
+
+                        <li>IoT Security</li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- SOFT SKILLS -->
+
+                <section class="section">
+
+                    <h3>SOFT SKILLS</h3>
+
+                    <ul>
+
+                        <li>Problem Solving</li>
+
+                        <li>Team Collaboration</li>
+
+                        <li>Leadership</li>
+
+                        <li>Technical Presentation</li>
+
+                        <li>Research</li>
+
+                        <li>Fast Learning</li>
+
+                    </ul>
+
+                </section>
+
+
+            </aside>
+
+
+            <!-- ================================
+                 RIGHT COLUMN
+            ================================= -->
+
+            <main class="main-content">
+
+
+                <!-- CAREER OBJECTIVE -->
+
+                <section class="section">
+
+                    <h3>CAREER OBJECTIVE</h3>
+
+                    <p>
+                        Motivated Cyber Security student with strong interests
+                        in cybersecurity, software development, artificial
+                        intelligence and emerging technologies. Experienced
+                        in academic and hackathon projects involving IoT,
+                        computer vision, automation and web development.
+                        Seeking opportunities to develop practical
+                        cybersecurity expertise and solve real-world problems.
+                    </p>
+
+                </section>
+
+
+                <!-- EDUCATION -->
+
+                <section class="section">
+
+                    <h3>EDUCATION</h3>
+
+                    <div class="education">
+
+                        <h4>
+                            Bachelor of Engineering – Computer Science 
+                        </h4>
+
+                        <p>
+                            <strong>
+                                Rathinam Technical Campus
+                            </strong>
+                        </p>
+
+                        <p>
+                            Currently Pursuing
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PROJECTS -->
+
+                <section class="section">
+
+                    <h3>PROJECTS</h3>
+
+
+                    <div class="project">
+
+                        <h4>
+                            VISTA – Vision-Based Autonomous Robot
+                        </h4>
+
+                        <p>
+                            AI-powered autonomous robot designed for object
+                            detection, scene understanding, obstacle
+                            avoidance, autonomous navigation and
+                            real-time decision making.
+                        </p>
+
+                        <span class="tech">
+                            Raspberry Pi • Computer Vision • Sensors • Robotics
+                        </span>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <h4>
+                            VisionVoice – AI Assistive Reader
+                        </h4>
+
+                        <p>
+                            Assistive reading system that captures printed
+                            text, performs OCR and converts recognized
+                            text into speech.
+                        </p>
+
+                        <span class="tech">
+                            Raspberry Pi • OpenCV • Tesseract OCR • TTS
+                        </span>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <h4>
+                            Smart Building Energy Management
+                        </h4>
+
+                        <p>
+                            IoT-based system for real-time energy monitoring,
+                            appliance automation, sensor monitoring and
+                            energy analytics.
+                        </p>
+
+                        <span class="tech">
+                            ESP32 • Sensors • Relays • Python • IoT
+                        </span>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <h4>
+                            RoadLens
+                        </h4>
+
+                        <p>
+                            Smart civic infrastructure platform for reporting,
+                            tracking and improving road-related issues.
+                        </p>
+
+                        <span class="tech">
+                            React • FastAPI • PostgreSQL • Supabase
+                        </span>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- HACKATHON -->
+
+                <section class="section">
+
+                    <h3>HACKATHON EXPERIENCE</h3>
+
+                    <p>
+                        Participated in college and international hackathons,
+                        working on projects involving
+                        <strong>
+                            AI, IoT, Cyber Security, Smart Infrastructure,
+                            Agriculture and Automation.
+                        </strong>
+                    </p>
+
+                    <p>
+                        Experienced in project ideation, prototyping,
+                        technical documentation, teamwork and presentations.
+                    </p>
+
+                </section>
+
+
+                <!-- CAREER GOAL -->
+
+                <section class="section">
+
+                    <h3>CAREER GOAL</h3>
+
+                    <p>
+                        To become a skilled Cyber Security Professional with
+                        expertise in networking, ethical hacking, penetration
+                        testing, digital forensics, cloud security and secure
+                        software development.
+                    </p>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
